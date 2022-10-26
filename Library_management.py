@@ -17,13 +17,15 @@ while (1):
     for i in library:
         print("id = %d, Name = %s, Quantity = %d" %(i["id"],i["Name"],i["Quantity"]))
     book_to_issue = int(input("Please select the id of book you want to issue "))
+    is_book_found = False
     for i in library:
         if i["id"] == book_to_issue:
             print("The book chosen by you is %s" %(i["Name"]))
-    #else:
-        #print("Sorry this is an invalid id, please select from the above list again")
+            is_book_found = True
             if i["Quantity"] > 0:
                 i["Quantity"] = i["Quantity"] - 1
             else:
                 print("Sorry the book selected by is not available, please try next time")
+    if not is_book_found:
+        print("Sorry this is an invalid id, please select from the above list again")
     print("Thank you and visit again")
