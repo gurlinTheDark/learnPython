@@ -1,0 +1,8 @@
+students = [{"Name":"Ashwin", "roll_id": 1, "parent": "Rajkumar"},{"Name":"Archana", "roll_id": 2, "parent": "Asha"},{"Name":"Asha", "roll_id": 3, "parent": "Vinaya"}, {"Name":"Rajkumar", "roll_id": 4, "parent": "Radhabai"}]
+
+p_name = input("Enter parents name")
+for i in students:
+    if i['parent']==p_name:
+        print("%s is %s's Parent" %(p_name,i["Name"]))
+else:
+    print("Please enter a valid name this person is not in the list")
